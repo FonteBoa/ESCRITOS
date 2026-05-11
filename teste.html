@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIMERIO IMPULSO — fonteboa</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body { background: #F2DFCE; color: #000; }
+header { padding: 28px 36px 0; overflow: hidden; }
+.titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+  display: block;
+  color: rgba(0,0,0,0.18);
+}
+nav {
+  padding: 64px 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-end;
+  position: relative;
+  z-index: 20;
+}
+nav a {
+  display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  padding: 2px 12px;
+  width: fit-content;
+  line-height: 1.15;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+nav a:hover { background: #000; color: #F2DFCE; }
+nav a.inicio:hover { background: #ae3321; color: #F2DFCE; }
+nav a.active { background: #000; color: #F2DFCE; }
+nav a.active:hover { background: #ae3321; color: #F2DFCE; }
+.hero-wrap {
+  position: fixed;
+  bottom: -0.08em;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  color: rgba(0,0,0,0.18);
+}
+
+.content-area-fade {
+  position: fixed;
+  left: 36px;
+  right: 36px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #F2DFCE);
+  pointer-events: none;
+  z-index: 25;
+}
+.content-area {
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  bottom: -40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.text-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -0.01em;
+  color: rgba(0,0,0,0.18);
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.scroll-area {
+  flex: 1;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.scroll-inner {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 16px 0 120px; /* Adicionado espaço extra abaixo para rolagem confortável */
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #3E474F;
+  white-space: pre-wrap;
+  tab-size: 4;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-inner::-webkit-scrollbar { display: none; }
+
+/* Bloco Minimalista do Cusdis */
+#comentarios-container {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px dashed rgba(0,0,0,0.15);
+}
+#cusdis_thread {
+  font-family: "Lora", Georgia, serif !important;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 32px 16px 0;
+    align-items: flex-end;
+  }
+  nav a {
+    font-size: 1.1rem;
+    padding: 1px 6px;
+  }
+  header { padding: 20px 16px 0; }
+}
+</style></head>
+<body>
+<header><div class="titulo" id="titulo">ficção breve de Luiz Fonte Boa, (1962-&thinsp;)</div></header>
+<nav id="nav-menu">
+  <a href="contos_index.html" class="active">índice de contos</a>
+  <a href="ensaios_index.html">ensaios</a>
+  <a href="novelas_index.html">novelas</a>
+  <a href="anotacoes.html">anotações</a>
+  <a href="index.html" class="inicio">início</a>
+</nav>
+<div class="content-area" id="content-area">
+  <div class="text-title" id="text-title">PRIMERIO IMPULSO</div>
+  <div class="scroll-area">
+    <div class="scroll-inner" id="scroller">Não apenas "voar", mas manter-se no ar estáticos, pousar verticalmente, mergulhar em meio líquidos. Eram máquinas muito mais pesadas e de maior envergadura, próprias para conduzir armamentos. Mas também haviam máquinas menores operadas remotamente sem um condutor físico, como drones teleguiados. Também havia todo um escudo de proteção antibalística contra este tipo de incursão externa, que era previamente detectado tanto por geoprocessamento, como por satélites e por radars, para serem então interceptados antes de atingir qualquer alvo. Nas cidades, portanto, durante o dia, não se viam pessoas transitando pelas ruas, apenas estas máquinas e outras. Sim, haviam também outras não pilotadas mas guiadas por sistemas de IA para coleta de poeira, pedregulhos, restos de construções, fragmentos de explosões. Além destas máquinas de manutenção do ambiente urbano, havia outras encarregadas da captação e processamento de água, etc. |||(4) A tarefa de proteção patrimonial era complexa, pois o vandalismo e os furtos eram feitos por um tipo bem menor de "robôs", também com seus condutores, mas praticamente ajustados ao próprio corpo do operador, à maneira de um traje propriamente dito, um escafandro. Complexo, foi dito, porque eram máquinas que, pelo seu menor volume e peso, eram muito mais ágeis, furtivas. E capazes de um gênero de mimetismo instantâneo, não aos olhos humanos nus propriamente, aos que seriam facilmente identificáveis, mas um tipo de camuflagem aos visores dos operadores das máquinas de vigilância e defesa. Todos, invariavelmente, eram capazes de deslocamentos aéreos, o que era um complicador terrível para as geringonças imensas, assemelhando-se quase a enxames capazes de destruir pequenas áreas isoladas e promover, por repetição, danos vastos e espalhados na superfície das máquinas gigantescas.
+
+    <!-- Integração do Widget de Discussão -->
+    <div id="comentarios-container">
+      <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="9be69399-5ef2-48f5-a0a0-0d34293f0b24"
+        data-page-id="primeiro_impulso"
+        data-page-url="github.io"
+        data-page-title="Primeiro Impulso">
+      </div>
+      <script async src="cusdis.com"></script>
+    </div>
+    
+    </div>
+  </div>
+</div>
+<div class="content-area-fade" id="content-area-fade"></div>
+<div class="hero-wrap"><div class="hero-text" id="hero">contos</div></div>
+<script>
+function fitTitulo() {
+  const el = document.getElementById("titulo");
+  el.style.fontSize = "100px";
+  const header = document.querySelector("header");
+  const headerStyle = window.getComputedStyle(header);
+  const marginLeft = parseInt(headerStyle.paddingLeft) || 36;
+  const margin = marginLeft * 2;
+  const scale = (window.innerWidth - margin) / el.scrollWidth;
+  el.style.fontSize = (100 * scale) + "px";
+}
+function fitTextTitle() {
+  const el = document.getElementById('text-title');
+  if (!el) return;
+  el.style.fontSize = '1.8rem';
+  const container = el.parentElement;
+  const available = container.offsetWidth;
+  if (el.scrollWidth > available) {
+    const scale = available / el.scrollWidth;
+    const newSize = Math.max(0.9, 1.8 * scale);
+    el.style.fontSize = newSize + 'rem';
+  }
+}
+
+function positionFade() {
+  const scrollArea = document.querySelector('.scroll-area');
+  const fade = document.getElementById('content-area-fade');
+  if (!scrollArea || !fade) return;
+  const rect = scrollArea.getBoundingClientRect();
+  fade.style.top = (rect.bottom - 80) + 'px';
+}
+function fitHero() {
+  const el = document.getElementById("hero");
+  el.style.fontSize = "100px";
+  const scale = (window.innerWidth * 1.12) / el.scrollWidth;
+  el.style.fontSize = (100 * scale) + "px";
+}
+function positionContentArea() {
+  const nav = document.getElementById('nav-menu');
+  const lastLink = nav.querySelector('a:last-child');
+  const lastLinkRect = lastLink.getBoundingClientRect();
+  const contentArea = document.getElementById('content-area');
+  const offset = window.innerWidth <= 600 ? 10 : 50;
+  contentArea.style.top = (lastLinkRect.bottom + offset) + 'px';
+}
+document.fonts.ready.then(() => { fitTitulo(); fitHero(); positionContentArea(); fitTextTitle(); positionFade(); });
+window.addEventListener("resize", () => { fitTitulo(); fitHero(); positionContentArea(); fitTextTitle(); positionFade(); });
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.href) { e.preventDefault(); window.location.href = this.href; }
+  });
+});
+
+const scroller = document.getElementById('scroller');
+const STEP = 120;
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); scroller.scrollBy({ top: STEP, behavior: 'smooth' }); }
+  if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); scroller.scrollBy({ top: -STEP, behavior: 'smooth' }); }
+});
+</script>
+</body></html>
