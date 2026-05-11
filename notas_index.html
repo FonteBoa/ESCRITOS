@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>notas — fonteboa</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body { background: #F2DFCE; color: #000; }
+header { padding: 28px 36px 0; overflow: hidden; }
+.titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+  display: block;
+  color: rgba(0,0,0,0.18);
+}
+nav {
+  padding: 64px 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-end;
+  position: relative;
+  z-index: 20;
+}
+nav a {
+  display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  padding: 2px 12px;
+  width: fit-content;
+  line-height: 1.15;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+nav a:hover { background: #000; color: #F2DFCE; }
+nav a.inicio:hover { background: #ae3321; color: #F2DFCE; }
+nav a.active { background: #000; color: #F2DFCE; }
+nav a.active:hover { background: #ae3321; color: #F2DFCE; }
+.hero-wrap {
+  position: fixed;
+  bottom: -0.08em;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  color: rgba(0,0,0,0.18);
+}
+
+.index-area {
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  bottom: 60px;
+  z-index: 10;
+}
+.index-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.index-genre-label {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: 2.6rem;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+.index-divider {
+  width: 224px;
+  height: 1px;
+  background: rgba(0,0,0,0.25);
+  margin-bottom: 14px;
+}
+.index-columns {
+  display: flex;
+  gap: 40px;
+}
+.index-col {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.index-col a {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  line-height: 1.35;
+  display: inline-block;
+  padding: 1px 6px;
+  transition: background 0.15s, color 0.15s;
+}
+.index-col a:hover {
+  background: #000;
+  color: #F2DFCE;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 32px 16px 0;
+    align-items: flex-end;
+  }
+  nav a {
+    font-size: 1.1rem;
+    padding: 1px 6px;
+  }
+  header { padding: 20px 16px 0; }
+}
+</style></head>
+<body>
+<header><div class="titulo" id="titulo">ficção breve de Luiz Fonte Boa, (1962-&thinsp;)</div></header>
+<nav id="nav-menu">
+  <a href="contos_index.html">contos</a>
+  <a href="ensaios_index.html">ensaios</a>
+  <a href="nouvelles_index.html">nouvelles</a>
+  <a href="notas_index.html" class="active">notas</a>
+  <a href="index.html" class="inicio">início</a>
+</nav>
+<div class="index-area" id="content-area">
+  <div class="index-header">
+    <span class="index-genre-label">notas</span>
+  </div>
+  <div class="index-divider"></div>
+  <div class="index-columns">
+    <ul class="index-col">
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-nota-2.html">Nota 2</a></li>
+      <li><a href="nota-nota-3.html">Nota 3</a></li>
+      <li><a href="nota-nota-4.html">Nota 4</a></li>
+      <li><a href="nota-nota-5.html">Nota 5</a></li>
+      <li><a href="nota-nota-6.html">Nota 6</a></li>
+      <li><a href="nota-nota-7.html">Nota 7</a></li>
+      <li><a href="nota-nota-8.html">Nota 8</a></li>
+      <li><a href="nota-nota-9.html">Nota 9</a></li>
+      <li><a href="nota-nota-10.html">Nota 10</a></li>
+      <li><a href="nota-nota-11.html">Nota 11</a></li>
+      <li><a href="nota-nota-12.html">Nota 12</a></li>
+      <li><a href="nota-nota-13.html">Nota 13</a></li>
+      <li><a href="nota-nota-14.html">Nota 14</a></li>
+      <li><a href="nota-nota-15.html">Nota 15</a></li>
+      <li><a href="nota-nota-16.html">Nota 16</a></li>
+      <li><a href="nota-nota-17.html">Nota 17</a></li>
+      <li><a href="nota-nota-18.html">Nota 18</a></li>
+      <li><a href="nota-nota-19.html">Nota 19</a></li>
+      <li><a href="nota-nota-20.html">Nota 20</a></li>
+      <li><a href="nota-nota-21.html">Nota 21</a></li>
+      <li><a href="nota-nota-22.html">Nota 22</a></li>
+      <li><a href="nota-nota-23.html">Nota 23</a></li>
+      <li><a href="nota-nota-24.html">Nota 24</a></li>
+      <li><a href="nota-nota-25.html">Nota 25</a></li>
+      <li><a href="nota-nota-26.html">Nota 26</a></li>
+      <li><a href="nota-nota-27.html">Nota 27</a></li>
+      <li><a href="nota-nota-28.html">Nota 28</a></li>
+      <li><a href="nota-nota-29.html">Nota 29</a></li>
+      <li><a href="nota-nota-30.html">Nota 30</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+      <li><a href="nota-teste-rolagem.html">Nota 1</a></li>
+    </ul>
+  </div>
+  </div>
+<div class="hero-wrap"><div class="hero-text" id="hero">notas</div></div>
+<script>
+function fitTitulo() {
+  const el = document.getElementById("titulo");
+  el.style.fontSize = "100px";
+  const header = document.querySelector("header");
+  const headerStyle = window.getComputedStyle(header);
+  const marginLeft = parseInt(headerStyle.paddingLeft) || 36;
+  const margin = marginLeft * 2;
+  const scale = (window.innerWidth - margin) / el.scrollWidth;
+  el.style.fontSize = (100 * scale) + "px";
+}
+function fitHero() {
+  const el = document.getElementById("hero");
+  el.style.fontSize = "100px";
+  const scale = (window.innerWidth * 1.12) / el.scrollWidth;
+  el.style.fontSize = (100 * scale) + "px";
+}
+function positionContentArea() {
+  const nav = document.getElementById('nav-menu');
+  const lastLink = nav.querySelector('a:last-child');
+  const lastLinkRect = lastLink.getBoundingClientRect();
+  const contentArea = document.getElementById('content-area');
+  const offset = window.innerWidth <= 600 ? 10 : 50;
+  contentArea.style.top = (lastLinkRect.bottom + offset) + 'px';
+}
+document.fonts.ready.then(() => { fitTitulo(); fitHero(); positionContentArea(); });
+window.addEventListener("resize", () => { fitTitulo(); fitHero(); positionContentArea(); });
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.href) { e.preventDefault(); window.location.href = this.href; }
+  });
+});
+</script>
+</body></html>

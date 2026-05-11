@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fonteboa</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body { background: #F2DFCE; color: #000; }
+header { padding: 28px 36px 0; overflow: hidden; }
+.titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+  display: block;
+  color: rgba(0,0,0,0.18);
+}
+nav {
+  padding: 64px 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-end;
+  position: relative;
+  z-index: 20;
+}
+nav a {
+  display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  padding: 2px 12px;
+  width: fit-content;
+  line-height: 1.15;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+nav a:hover { background: #000; color: #F2DFCE; }
+nav a.inicio:hover { background: #ae3321; color: #F2DFCE; }
+nav a.active { background: #000; color: #F2DFCE; }
+nav a.active:hover { background: #ae3321; color: #F2DFCE; }
+.hero-wrap {
+  position: fixed;
+  bottom: -0.08em;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  color: rgba(0,0,0,0.18);
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 32px 16px 0;
+    align-items: flex-end;
+  }
+  nav a {
+    font-size: 1.1rem;
+    padding: 1px 6px;
+  }
+  header { padding: 20px 16px 0; }
+}
+</style></head>
+<body>
+<header><div class="titulo" id="titulo">ficção breve de Luiz Fonte Boa, (1962-&thinsp;)</div></header>
+<nav id="nav-menu">
+  <a href="contos_index.html">contos</a>
+  <a href="ensaios_index.html">ensaios</a>
+  <a href="novelas_index.html">novelas</a>
+  <a href="anotacoes.html">anotações</a>
+</nav>
+<div class="hero-wrap"><div class="hero-text" id="hero">fonteboa</div></div>
+<script>
+function fitTitulo() {
+  const el = document.getElementById("titulo");
+  el.style.fontSize = "100px";
+  const header = document.querySelector("header");
+  const headerStyle = window.getComputedStyle(header);
+  const marginLeft = parseInt(headerStyle.paddingLeft) || 36;
+  const margin = marginLeft * 2;
+  const scale = (window.innerWidth - margin) / el.scrollWidth;
+  el.style.fontSize = (100 * scale) + "px";
+}
+function fitHero() {
+  const el = document.getElementById("hero");
+  el.style.fontSize = "100px";
+  const scale = (window.innerWidth * 1.12) / el.scrollWidth;
+  el.style.fontSize = (100 * scale) + "px";
+}
+function positionContentArea() {
+  const nav = document.getElementById('nav-menu');
+  const lastLink = nav.querySelector('a:last-child');
+  const lastLinkRect = lastLink.getBoundingClientRect();
+  const contentArea = document.getElementById('content-area');
+  const offset = window.innerWidth <= 600 ? 10 : 50;
+  contentArea.style.top = (lastLinkRect.bottom + offset) + 'px';
+}
+document.fonts.ready.then(() => { fitTitulo(); fitHero(); positionContentArea(); });
+window.addEventListener("resize", () => { fitTitulo(); fitHero(); positionContentArea(); });
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.href) { e.preventDefault(); window.location.href = this.href; }
+  });
+});
+</script>
+</body></html>
